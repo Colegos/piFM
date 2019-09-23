@@ -1,0 +1,96 @@
+/*! minireset.css v0.0.5 | MIT License | github.com/jgthms/minireset.css */
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal; }
+
+ul {
+  list-style: none; }
+
+button, input, select, textarea {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+img, video {
+  height: auto;
+  max-width: 100%; }
+
+iframe {
+  border: 0; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td, th {
+  padding: 0;
+  text-align: left; }
+
+body {
+  font: 400 1rem sans-serif; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.container {
+  width: 100%;
+  padding: 0rem 1rem; }
+  @media (min-width: 768px) {
+    .container {
+      margin: 0 auto;
+      max-width: 1100px; } }
+
+.btn {
+  cursor: pointer; }
+
+/* ***************************** Header ***************************** */
+header {
+  padding: 0.5rem 0;
+  background: #424242;
+  color: #f3f3f3; }
+  header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+  header input {
+    height: 22px; }
+    header input[type="text"] {
+      padding: 12px; }
+
+/* ***************************** Main ******************************* */
+main li {
+  border-bottom: 1px solid #808080; }
+  main li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0; }
+  main li img {
+    width: 26px;
+    height: 26px;
+    opacity: 0.5;
+    transition: opacity .5s ease; }
+  main li:hover img {
+    opacity: 1; }
+main li:last-child {
+  border: none; }
+
+/* ***************************** Controls **************************** */
+#controls {
+  padding: 0.5rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #424242;
+  color: #f3f3f3; }
+
+/*# sourceMappingURL=app.css.map */

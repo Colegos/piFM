@@ -1,0 +1,100 @@
+@import 'reset';
+
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+@mixin md {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ @mixin lg {
+    @media (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+ }
+ @mixin xl {
+    @media (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+ }
+//  @mixin rwd($screen) {
+//     @media (min-width: $screen+'px' ) {
+//        @content;
+//     }
+//  }
+
+body {
+    font:400 1rem sans-serif;
+}
+a {
+    color:inherit;
+    text-decoration:none;
+}
+.container {
+    width:100%;
+    padding:0rem 1rem;
+    @include md {
+        margin:0 auto;
+        max-width: 1100px;
+    }
+}
+.btn {
+    cursor:pointer;
+}
+/* ***************************** Header ***************************** */
+header {
+    padding:0.5rem 0;
+    background:#424242;
+    color: #f3f3f3;
+
+    .container {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    input {
+        height:22px;
+
+        &[type="text"] {
+            padding:12px;
+
+        }
+    }
+}
+
+/* ***************************** Main ******************************* */
+main {
+
+    li {
+        border-bottom:1px solid #808080;
+
+        a {
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:0.5rem 0;
+        }
+        img {
+            width:26px;
+            height:26px;
+            opacity:0.5;
+            transition:opacity .5s ease;
+        }
+        &:hover img {
+            opacity:1;
+        }
+    }
+    li:last-child { border:none;}
+}
+
+/* ***************************** Controls **************************** */
+#controls {
+    padding:0.5rem 0;
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background:#424242;
+    color: #f3f3f3;
+}

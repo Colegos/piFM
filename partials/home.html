@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+        <a href="">Menu</a>
+        <form action="">
+            <input type="text" name="search" id="search" placeholder="Rechercher" ng-model="search.name">
+        </form>
+    </div>
+</header>
+
+<main>
+    <ul>
+        <li ng-repeat="radio in radios | filter:search | orderBy:name" (click)="changeRadio()">
+            <div class="container">
+                <a href="" ng-click="changeRadio($event, radio.id)">
+                    {{radio.name}}
+                    <img src="./src/{{radio.logo_src}}" alt="">
+                </a>
+            </div>
+        </li>
+    </ul>
+</main>
+
+<div id="controls">
+    <div class="container">
+        <a href=""><i class="far fa-pause-circle"></i></a>
+        <input type="range" name="volum" id="volum" min="0" max="100">
+        <a href=""><i class="far fa-heart"></i></a> <!-- <i class="fas fa-heart"></i> -->
+    </div>
+</div>
